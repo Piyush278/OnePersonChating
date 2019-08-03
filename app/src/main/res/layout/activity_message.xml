@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".Message">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="660dp"
+        android:id="@+id/lv1"
+        >
+
+
+    </ListView>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textColorHint="#CFD8DC"
+        android:textColor="#CFD8DC"
+        android:background="@color/colorPrimaryDark"
+        android:padding="4dp"
+
+        android:hint="Write a message..."
+        android:id="@+id/messageArea"
+        android:maxHeight="80dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_weight="4"
+        android:src="@android:drawable/ic_menu_send"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="Fa"
+        android:id="@+id/sendButton"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="20"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/layout1">
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
