@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class Messagesadapter implements ListAdapter {
 
     Context context;
-    messages[] Messages;
+    List<messages> Messages;
     LayoutInflater inflater;
-    public Messagesadapter(Context context,messages[] Messages){
+    public Messagesadapter(Context context, List<messages> Messages){
         this.context=context;
         this.Messages=Messages;
         this.inflater=(LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
@@ -41,7 +43,7 @@ public class Messagesadapter implements ListAdapter {
 
     @Override
     public int getCount() {
-        return Messages.length;
+        return Messages.size();
     }
 
     @Override
@@ -66,7 +68,7 @@ public class Messagesadapter implements ListAdapter {
             TextView from =layoutview.findViewById(R.id.From);
             TextView message = layoutview.findViewById(R.id.txtMessage);
             TextView to=layoutview.findViewById(R.id.to);
-            messages Message=Messages[i];
+            messages Message= Messages.get(i);
             from.setText(Message.from);
             to.setText(Message.to);
             message.setText(Message.message);

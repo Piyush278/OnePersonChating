@@ -26,7 +26,7 @@ public class Userlist extends AppCompatActivity {
         setContentView(R.layout.activity_userlist);
 
         lv = findViewById(R.id.lv);
-        //  tv = findViewById(R.id.tv);
+        // tv = findViewById(R.id.tv);
 
         userThread thread=new userThread("http://prahladghat.adorecatering.co.in/allusers.aspx");
         thread.execute();

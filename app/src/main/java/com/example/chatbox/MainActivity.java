@@ -103,11 +103,14 @@ public class MainActivity extends AppCompatActivity {
 
                     startActivity(intent);
                 }
+                else if(data.equals("0")){
+                 Toast.makeText(MainActivity.this,"Wrong password or username",Toast.LENGTH_SHORT).show();
+
+                }
 
             } catch (Exception ex) {
                 System.out.println(ex);
-                Toast.makeText(MainActivity.this,"Not Registered Username", Toast.LENGTH_SHORT).show();
-                //  setTitle("Not Registered Username");
+                Toast.makeText(MainActivity.this,"on the internet", Toast.LENGTH_SHORT).show();
             }
         }
     }
